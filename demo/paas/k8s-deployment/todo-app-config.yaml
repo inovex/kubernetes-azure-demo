@@ -1,0 +1,17 @@
+apiVersion: v1
+data:
+  redis.config: |-
+    {
+      "HealthCheckTime": 0,
+      "DBDriver": "redis",
+      "DBConfig": {
+        "master": "ms-roadshow-demo-redis.redis.cache.windows.net:6379",
+        "masterPassword": "BZ9JEZ6gd3GWPl4yO77atGAlhlRmZ6nEbrsxd0hwHuo=",
+        "slave": "ms-roadshow-demo-redis.redis.cache.windows.net:6379",
+        "slavePassword": "BZ9JEZ6gd3GWPl4yO77atGAlhlRmZ6nEbrsxd0hwHuo="
+      }
+    }
+kind: ConfigMap
+metadata:
+  name: todo-app-config
+  namespace: todo-app

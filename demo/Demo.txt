@@ -1,0 +1,7 @@
+minikube start
+kubectl apply -f iaas/k8s-deployment/
+minikube service --namespace=todo-app todo-app --url
+
+kubectl config use-context kubernetes-demo
+kubectl apply -f paas/k8s-deployment/
+kubectl get svc --namespace=todo-app
